@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Profile Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Explore User Profile</h1>
+        <p>Explore Student Profile</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Search Section -->
+        <section class="search-container">
+
+            <h2>Find Profiles</h2>
+
+            <div class="search-controls">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by name or email"
+                >
+
+                <button id="searchBtn">Search</button>
+
+                <button id="loadBtn">Load All Profiles</button>
+
+                <span id="status">Click Load All Profiles to begin</span>
+
+                <span id="count">Profiles displayed: 0</span>
+
+            </div>
+
+        </section>
+
+        <!-- Student Profile Section -->
+        <section class="profiles-section">
+
+            <div class="section-heading">
+                <h2>Student Profiles</h2>
+                <p>Explore and access student information.</p>
+            </div>
+
+            <!-- Profile cards will appear here -->
+            <div class="profile-container" id="profileContainer">
+
+                <div class="empty-message">
+                    <div class="empty-icon">👨‍🎓</div>
+                    <h3>No profiles loaded</h3>
+                    <p>Click "Load All Profiles" to view student profiles.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Student Details Modal -->
+    <div class="modal" id="profileModal">
+
+        <div class="modal-content">
+
+            <button class="close-btn" id="closeModal" aria-label="Close">
+                &times;
+            </button>
+
+            <div id="profileDetails"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
